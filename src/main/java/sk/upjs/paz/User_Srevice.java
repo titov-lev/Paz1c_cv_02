@@ -11,6 +11,9 @@ public class User_Srevice {
     }
 
     public GenderRatio computeGenderRatio() {
+        if (this.database.isEmpty()) {
+            return new GenderRatio(0,0,0);
+        }
         double boys_count = 0;
         double girls_count = 0;
         double unknows_count = 0;
